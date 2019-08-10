@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
+{% block title %}Camp Requirements&nbsp-&nbsp{% endblock %}
+
 {% load bootstrap3 %}
 
 
-{% block content %}  
+{% block content %}
   <div class="text-right">
-    <a href="{%url 'coordinator_home' %}">Coordinator Home</a> | 
+    <a href="{%url 'coordinator_home' %}">Coordinator Home</a> |
     <a href="{%url 'user_logout' %}">Logout</a>
   </div>
 
@@ -34,9 +36,9 @@
     <p class="text-center">
         Please update this information whenever you receieve new supplies or need more.
         <br>
-        നിങ്ങൾ പുതിയ സപ്ലൈസ് സ്വീകരിക്കുകയോ കൂടുതൽ ആവശ്യമുള്ളപ്പോഴോ അപ്ഡേറ്റ് ചെയ്യുക.        
+        നിങ്ങൾ പുതിയ സപ്ലൈസ് സ്വീകരിക്കുകയോ കൂടുതൽ ആവശ്യമുള്ളപ്പോഴോ അപ്ഡേറ്റ് ചെയ്യുക.
     </p>
-  </form> 
+  </form>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>

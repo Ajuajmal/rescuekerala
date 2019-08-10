@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Volunteer/NGO Registration&nbsp-&nbsp{% endblock %}
 {% load static %}
 {% block content %}
 
@@ -33,7 +34,7 @@
             View Registered<br/> Volunteers
             <span class="ml small"></span>
         </span>
-    </a> 
+    </a>
     <a href="{%url 'ngoregisterview' %}" class="home-button card" role="button">
         {% bootstrap_icon "list-alt" %}
         <span class="text">

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Person Registration&nbsp-&nbsp{% endblock %}
 {% load bootstrap3 %}
 
 {% block css %}
@@ -11,15 +12,15 @@
 {% endblock %}
 
 
-{% block content %}  
+{% block content %}
   <div class="text-right">
-    <a href="/coordinator_home">Coordinator Home</a> | 
+    <a href="/coordinator_home">Coordinator Home</a> |
     <a href="/logout">Logout</a>
   </div>
 
   <h3 class="text-center">
-      Person Registration | 
-      വ്യക്തിയെ രജിസ്റ്റർ ചെയ്യുക      
+      Person Registration |
+      വ്യക്തിയെ രജിസ്റ്റർ ചെയ്യുക
   </h3>
 
   <div class="text-center text-danger">
@@ -43,7 +44,7 @@
         Please enter all available information. This can help relatives find them if required. <br>
         ബന്ധുക്കൾക്ക് ഇവരെ കണ്ടെത്തുന്നതിന് ഇത് സഹായിക്കും
     </p>
-  </form> 
+  </form>
 {% endblock %}
 
 {% block javascript %}
@@ -53,10 +54,10 @@
     $('#id_gender_0').parents('.radio').hide();
     $('#id_gender > .radio').removeClass('radio').addClass('radio-inline');
     $('#id_camped_at').attr('readonly', true);
-    $("#id_checkin_date").prop('required',false); 
+    $("#id_checkin_date").prop('required',false);
     $("#id_checkout_date").prop('required',false);
-    $('#id_district').selectize(); 
-    $('#id_checkin_date, #id_checkout_date').datepicker({  
+    $('#id_district').selectize();
+    $('#id_checkin_date, #id_checkout_date').datepicker({
       format: "dd-mm-yyyy",
       todayHighlight: true
     });

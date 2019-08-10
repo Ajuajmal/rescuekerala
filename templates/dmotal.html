@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Request Stats per Taluk&nbsp-&nbsp{% endblock %}
 {% load static %}
 {% block content %}
 
@@ -17,36 +18,36 @@
     <option value="all">All Districts</option>
 
     <option value="tvm">Thiruvananthapuram - തിരുവനന്തപുര</option>
-  
+
     <option value="ptm">Pathanamthitta - പത്തനംതിട</option>
-  
+
     <option value="alp">Alappuzha - ആലപ്പുഴ</option>
-  
+
     <option value="ktm">Kottayam - കോട്ടയം</option>
-  
+
     <option value="idk">Idukki - ഇടുക്കി</option>
-  
+
     <option value="mpm">Malappuram - മലപ്പുറം</option>
-  
+
     <option value="koz">Kozhikode - കോഴിക്കോട</option>
-  
+
     <option value="wnd">Wayanad - വയനാട്</option>
-  
+
     <option value="knr">Kannur - കണ്ണൂർ</option>
-  
+
     <option value="ksr">Kasaragod - കാസർഗോഡ്</option>
-  
+
     <option value="pkd">Palakkad - പാലക്കാട്</option>
-  
+
     <option value="tcr">Thrissur - തൃശ്ശൂർ</option>
-  
+
     <option value="ekm">Ernakulam - എറണാകുളം</option>
-  
+
     <option value="kol">Kollam - കൊല്ലം</option>
-  
 
 
-  </select> 
+
+  </select>
   <br>
   <input type="submit" class="btn btn-primary">
 
@@ -67,7 +68,7 @@
             <th>To‍tal Female</th>
             <th>To‍tal Infants</th>
             <th>Med Needed</th>
-            
+
           </tr>
         </thead>
         <tbody>
@@ -81,7 +82,7 @@
               <td>{{ camp.total_female }}</td>
               <td>{{ camp.total_infant }}</td>
               <td>{{ camp.total_medical }}</td>
-              
+
             </tr>
         {% endfor %}
       </tbody>

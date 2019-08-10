@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% block title %}Request Updates&nbsp-&nbsp{% endblock %}
 {% load bootstrap3 %}
 
 {% block content %}
- 
- 
+
+
  <div class="table-responsive">
   <table class="table">
     <thead>
@@ -33,7 +34,7 @@
       </tr>
       <tr>
         <td><b> Requestee : </b></td><td>{{ view.original_request.requestee }}</td>
-      </tr>	  
+      </tr>
       <tr>
         <td><b> Contact number : </b></td><td><a href="tel:{{ view.original_request.requestee_phone }}" >{{ view.original_request.requestee_phone }}</a></td>
       </tr>
@@ -64,7 +65,7 @@
     </thead>
 
     <tbody>
-		
+
 	    {% for update in view.updates %}
 	        <tr>
 	          <td>{{ update.status }} {{ update.other_status }}</td>
@@ -76,7 +77,7 @@
 	          <td>{{ update.update_ts }}</td>
 	        </tr>
 	    {% endfor %}
-		
+
    </tbody>
   </table>
 
@@ -101,7 +102,7 @@
 		  $("[name=other_status]").attr('type', 'hidden');
 		  $("[name=other_status]").attr('required', false)
 		  $("[for=id_other_status]").hide();
-		  
+
 	  })
 	  $("[name=status]").change(function() {
 		  var value = this.value;
@@ -114,6 +115,6 @@
 			  // $("[for=id_other_status]").show();
 		  }
 	  })
-	  
+
   </script>
 {% endblock %}

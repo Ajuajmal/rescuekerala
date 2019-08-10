@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% block title %}Relief Camp Requirements&nbsp-&nbsp{% endblock %}
+
 {% load bootstrap3 %}
 
 {% block content %}
@@ -98,7 +100,7 @@
             <a href="?page=1&name__icontains={{ request.GET.name__icontains }}&district={{ request.GET.district }}">&laquo; first</a>
             <a href="?page={{data.previous_page_number}}&name__icontains={{ request.GET.name__icontains }}&district={{ request.GET.district }}">previous</a>
         {% endif %}
-  
+
         {% for i in data.paginator.page_range %}
         {% if data.number == i %}
           <a class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></a>
@@ -106,7 +108,7 @@
           <a href="?page={{i}}&name__icontains={{ request.GET.name__icontains }}&district={{ request.GET.district }}">{{ i }}</a>
         {% endif %}
         {% endfor %}
-  
+
         {% if data.has_next %}
             <a href="?page={{ data.next_page_number }}&name__icontains={{ request.GET.name__icontains }}&district={{ request.GET.district }}">next</a>
             <a href="?page={{ data.paginator.num_pages }}&name__icontains={{ request.GET.name__icontains }}&district={{ request.GET.district }}">last &raquo;</a>
@@ -129,5 +131,5 @@
       $('#id_district').selectize();
     });
   });
-</script> 
+</script>
 {% endblock %}

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Volunteers Registration&nbsp-&nbsp{% endblock %}
 {% load bootstrap3 %}
 
 {% block content %}
@@ -16,7 +17,7 @@
   <form method="post" id="volunteer_consent_form">
   {% csrf_token %}
   {% if form.instance.pk %}
-  
+
 	 <div class="table-responsive">
 	  <table class="table">
 	    <thead>
@@ -39,7 +40,7 @@
 	        <td><b> Consent : </b></td><td>{% if form.instance.has_consented %} yes {% else %} no {% endif %}</td>
 	      </tr>
 		  <tr>
-			  <td colspan="2" style="text-align:center;">	
+			  <td colspan="2" style="text-align:center;">
 				  <button type="button" class="btn btn-success consent" data-consent="confirm">Confirm</button>&nbsp;&nbsp;
 				  <button type="button" class="btn btn-danger consent" data-consent="cancel">Cancel</button>
 			  </td>
@@ -53,11 +54,11 @@
 	<div hidden>
     {% bootstrap_form form %}
 	</div>
-	
+
   {% else %}
   {% bootstrap_form form %}
 	{% buttons %}
-	
+
 	<blockquote>
 		<small>
 			By providing your personal information, you consent to making such information accessible to persons who visit this website.
@@ -77,13 +78,13 @@
   {% bootstrap_icon "star" %} Submit
   </button>
   {% endbuttons %}
-  
+
   {% endif %}
-  
-  
+
+
   </form>
-  
-  
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script>
@@ -94,25 +95,25 @@
 	// 	} else if(consent === 'cancel'){
 	// 		$("[name=has_consented]").prop("checked", false);
 	// 	}
-		
+
 	// 	$("#volunteer_consent_form").submit();
 	// })
 
 	$('#submit_btn').click(function (){
 		if(!$('#register_consent').is(":checked")){
-			alert('Please review and accept our terms and conditions');	
+			alert('Please review and accept our terms and conditions');
 			event.preventDefault();
 			return false;
 		}
 	});
-	
-	
+
+
 
 	// $( "#volunteer_consent_form" ).submit(function( event ) {
 	//   alert( "Handler for .submit() called." );
-	//   
+	//
 	// })
-    
+
     window.addEventListener('load', function() {
         $("#id_phone").attr('type', 'number');
         $('#id_district').selectize();

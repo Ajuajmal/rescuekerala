@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Camp Stats per District &nbsp-&nbsp{% endblock %}
 {% load static %}
 {% block content %}
 
@@ -21,7 +22,7 @@
             <th>To‍tal Female</th>
             <th>To‍tal Infants</th>
             <th>Med Needed</th>
-            
+
           </tr>
         </thead>
         <tbody>
@@ -34,7 +35,7 @@
               <td>{{ camp.total_female }}</td>
               <td>{{ camp.total_infant }}</td>
               <td>{{ camp.total_medical }}</td>
-              
+
             </tr>
         {% endfor %}
       </tbody>

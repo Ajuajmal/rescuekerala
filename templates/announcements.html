@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} {% block content %} {% load bootstrap3 %}
+{% extends 'base.html' %} {% block title %}Announcements&nbsp-&nbsp{% endblock %} {% load static %} {% block content %} {% load bootstrap3 %}
 
 <!--Navigation Breadcrumbs-->
 <nav aria-label="breadcrumb">
@@ -21,11 +21,11 @@
                 <span class="card-time">{% bootstrap_icon "time" %} {{ req.dateadded }}</span>
             </div>
         {% endfor %}
-        
+
         <div class="priority-index">
             Priority : <b style="background:#ef7831"></b> High <b style="background:#ffc107"></b> Medium <b style="background:#286090"></b> Low
         </div>
-            
+
         {% for req in data %}
             <div class="card priority-{{ req.get_priority_display.lower }}">
                 <span class="card-title">{% bootstrap_icon "time" %} {{ req.dateadded }}&nbsp;<b title="Priority" class="card-priority">{{ req.get_priority_display.upper }} priority</b></span><br/><br/>

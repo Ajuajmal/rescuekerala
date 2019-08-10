@@ -17,7 +17,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="{% static 'images/keralarescue.png' %}">
 
-  <title>Kerala Rescue</title>
+  <title>{% block title %}{% endblock %}Kerala Rescue</title>
 
   {# <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/> #}
 
@@ -90,7 +90,7 @@
         24x7 Helpline Call Centre, Disaster Control Unit, Directorate of Health Services, Government of Kerala.<br />
       </span>
     -->
-    
+
     {# &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp; #}
     {# <a href="/ieee/"><img src="{% static 'images/ieeelogo.png' %}" class="footer-logo"></a> #}
   </div>
